@@ -54,7 +54,10 @@ class Song
     new_song.name = data[1].chomp(".mp3").strip()
     new_song.artist_name = data[0].strip()
     @@all << new_song
+  end
   
+  def self.destroy_all
+    @@all.clear
   end
   
   def self.all
